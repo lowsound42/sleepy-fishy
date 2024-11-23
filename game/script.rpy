@@ -2,6 +2,9 @@
 define f = Character('Fincenzo', color="#1ea6cd", image="fincenzo")
 define p = Character('Mister Pink', color="#eb3af3", image="pink")
 define b = Character('Bobby', color="#5b5655")
+define s = Character('Sally', color="#5b5655")
+define g = Character('Gertrude', color="#5b5655")
+
 define sally_points = 0
 define gerty_points = 0
 
@@ -11,7 +14,7 @@ label start:
 
     scene bg shadow office
     
-    show shadow dad
+    show shadow office
 
     d "Listen, Finny my boy, we\’ve gotta keep a low profile for now"
 
