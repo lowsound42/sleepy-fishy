@@ -4,6 +4,10 @@ define p = Character('Mister Pink', color="#eb3af3", image="pink")
 define b = Character('Bobby', color="#5b5655")
 define s = Character('Sally', color="#5b5655")
 define g = Character('Gertrude', color="#5b5655")
+define npcf = Character('NPC Fish', color="#cf4226")
+define ll = Character('Lunch Lady', color="#228822")
+define sh = Character('Shellby', color="#86dad5")
+define gl = Character('Gilbert', color = "#555555")
 
 define sally_points = 0
 define gerty_points = 0
@@ -22,5 +26,6 @@ label start:
 
     f "{i}Ugh, another day, another school, we have to hide out in this small town. I don\’t even know if I want to be the Fishhead anymore.{/i}"
 
+    jump day_one_lunch
     jump classroom
 
