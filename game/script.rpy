@@ -1,7 +1,9 @@
 ﻿define d = Character('Mafia Dad', color="#5b5655")
 define f = Character('Fincenzo', color="#1ea6cd", image="fincenzo")
-
-default message = 1
+define p = Character('Mister Pink', color="#eb3af3", image="pink")
+define b = Character('Bobby', color="#5b5655")
+define sally_points = 0
+define gerty_points = 0
 
 image side fincenzo = im.FactorScale("fincenzo.png", 0.25,0.25)
 
