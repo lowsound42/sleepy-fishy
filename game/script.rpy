@@ -1,33 +1,19 @@
-﻿# The script of the game goes in this file.
+﻿define d = Character('Mafia Dad', color="#5b5655")
+define f = Character('Fincenzo', color="#1ea6cd")
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define e = Character("Eileen")
-
-
-# The game starts here.
+default message = 1
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    scene bg shadow office
+    
+    show shadow dad
 
-    scene bg room
+    d "Listen, Finny my boy, we\’ve gotta keep a low profile for now"
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    d "The Manta-gues have been on our ass. You\’re gonna be the future Fishhead and I\’ve got to protect you."
 
-    show eileen happy
+    "{i}Ugh, another day, another school, we have to hide out in this small town. I don\’t even know if I want to be the Fishhead anymore.{/i}"
 
-    # These display lines of dialogue.
+    jump classroom
 
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
-
-    return
