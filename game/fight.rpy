@@ -1,6 +1,6 @@
 label fight_start:
 
-    scene outside school
+    scene classroomgeneric
 
     $ cont = 0 #continue variable
     $ counter = 0
@@ -18,13 +18,13 @@ label fight_start:
         # to repeat the qte events until it is missed
 
     if counter == 10: #if we reached 10 rounds without missing
-        "Success!"
-        jump fin_win
-    
+        #"Success!"
+        $ fight_status = true
+        
     else:
         #play sound "sounds/miss.mp3"
-        "{b}GAME OVER{/b}"
-        jump fin_lose
+        #"{b}GAME OVER{/b}"
+        $ fight_status = false
 
     # basic game over sound + message
 
@@ -48,25 +48,30 @@ label qte_setup(time_start, time_max, interval, trigger_key, x_align, y_align):
     $ interval = interval
     $ trigger_key = trigger_key
 
+    hide right_arrow
+    hide left_arrow
+    hide up_arrow
+    hide down_arrow
+
     if trigger_key == "K_RIGHT":
         show right_arrow:
             xalign 0.5
-            yalign 0.3
+            yalign 0.4
 
     elif trigger_key == "K_LEFT":
         show left_arrow:
             xalign 0.5
-            yalign 0.3
+            yalign 0.4
 
     elif trigger_key == "K_UP":
         show up_arrow:
             xalign 0.5
-            yalign 0.3
+            yalign 0.4
 
     elif trigger_key == "K_DOWN":
         show down_arrow:
             xalign 0.5
-            yalign 0.3
+            yalign 0.4
 
     call screen qte_simple
     # can change to call screen qte_button to switch to button mode
@@ -87,28 +92,23 @@ screen qte_simple:
     key trigger_key action ( Return(1) )
     # the "key detector" (ends qte_event by returning 1)
 
-    vbox:
-        xalign x_align
-        yalign y_align
-        spacing 25
-        # vbox arrangement
+    # vbox:
+    #     xalign x_align
+    #     yalign y_align
+    #     spacing 25
+    #     # vbox arrangement
 
-        text trigger_key:
-            xalign 0.5
-            color "#e30606"
-            size 36
+    #     text trigger_key:
+    #         xalign 0.5
+    #         color "#e30606"
+    #         size 36
 
-        bar:
-            value time_start
-            range time_max
-            xalign 0.5
-            xmaximum 300
-            if time_start < (time_max * 0.25):
-                left_bar "#f00"
-                # this is the part that changes the colour to red if the time reaches less than 25%
-
-
-label fight_win:
-
-
-label fight_lose:
+    bar:
+        value time_start
+        range time_max
+        xalign 0.5
+        yalign 0.6
+        xmaximum 300
+        if time_start < (time_max * 0.25):
+            left_bar "#f00"
+            # this is the part that changes the colour to red if the time reaches less than 25%
