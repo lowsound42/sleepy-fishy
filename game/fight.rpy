@@ -19,12 +19,12 @@ label fight_start:
 
     if counter == 10: #if we reached 10 rounds without missing
         #"Success!"
-        $ fight_status = true
+        $ fight_status = True
         
     else:
         #play sound "sounds/miss.mp3"
         #"{b}GAME OVER{/b}"
-        $ fight_status = false
+        $ fight_status = False
 
     # basic game over sound + message
 

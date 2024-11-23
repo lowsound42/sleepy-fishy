@@ -99,63 +99,63 @@ label fish_fight:
     scene bg lunch room line
     show lunchroom
 
-    "FIGHT moment, this should be a MINIGAME!!!"
+    call fight_start
 
-        if fight_status:
+    if fight_status:
 
-            if sally_fight:
-                
-                show sally_scaled
+        if sally_fight:
+            
+            show sally_scaled
 
-                s "Wow, thanks Finchenzo! Are you okay? Where\'d you learn to fight like that?"
+            s "Wow, thanks Finchenzo! Are you okay? Where\'d you learn to fight like that?"
 
-                menu: 
-                    "Oh that was nothing. My dad taught me how to fight":
+            menu: 
+                "Oh that was nothing. My dad taught me how to fight":
 
-                        $ sally_points += 1
+                    $ sally_points += 1
 
-                        jump twoclass
+                    jump twoclass
 
-                    "I just got lucky. I don\'t usually do things like that":
+                "I just got lucky. I don\'t usually do things like that":
 
-                        jump twoclass
-            else:
+                    jump twoclass
+        else:
 
-                show gertrude_scaled
-                
-                g "Smooth moves there, Finny boy. That guy\'s major chum scum. Where\'d you learn to fight like that?"
+            show gertrude_scaled
+            
+            g "Smooth moves there, Finny boy. That guy\'s major chum scum. Where\'d you learn to fight like that?"
 
-                menu: 
-                    "Oh that was nothing. My dad taught me how to fight":
+            menu: 
+                "Oh that was nothing. My dad taught me how to fight":
 
-                        $ gerty_points += 1
-                        jump twoclass
+                    $ gerty_points += 1
+                    jump twoclass
 
-                    "That fish has two left fins, he didn\'t stand a chance anyway.":
-                        jump twoclass
+                "That fish has two left fins, he didn\'t stand a chance anyway.":
+                    jump twoclass
 
-                    "That fish has two left fins, he didn\’t stand a chance anyway.":
+                "That fish has two left fins, he didn\'t stand a chance anyway.":
 
-                        return
-        "Lose":
-            if sally_fight:
-                
-                show sally_scaled
+                    return
+    else:
+        if sally_fight:
+            
+            show sally_scaled
 
-                s "You okay, Finchenzo? Thanks for trying to help, that guy\'s a total blowhole."
+            s "You okay, Finchenzo? Thanks for trying to help, that guy\'s a total blowhole."
 
-                f "Thanks, I\'m okay"
+            f "Thanks, I\'m okay"
 
-                f "{i}Ugh, my dad would be so disappointed{/i}"
+            f "{i}Ugh, my dad would be so disappointed{/i}"
 
-                jump twoclass
-            else:
+            jump twoclass
+        else:
 
-                show gertrude_scaled
-                
-                g "Need some help there, Finny boy? That guy\'s major chum scum."
+            show gertrude_scaled
+            
+            g "Need some help there, Finny boy? That guy\'s major chum scum."
 
-                f "Thanks, I\'m okay"
+            f "Thanks, I\'m okay"
 
-                f "{i}Ugh, my dad would be so disappointed{/i}"
-                jump twoclass
+            f "{i}Ugh, my dad would be so disappointed{/i}"
+            jump twoclass
