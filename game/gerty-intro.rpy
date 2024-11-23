@@ -1,10 +1,11 @@
 label gintro:
-    show gertrude
+    show classroomgeneric
+    show gerty_scaled
     g "Heyy, this fish\’s got some bite! Come sit with us. I\’m G and this is Bobby"
-    hide gertrude
+    hide gerty_scaled
 
-    show sally
+    show sally_scaled
     s "Can you guys be quiet? The class is starting."
-    hide sally
+    hide sally_scaled
 
     jump pink_end
