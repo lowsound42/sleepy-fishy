@@ -55,11 +55,11 @@ label bully_lunch:
 
             hide shellby
 
-            show sally
+            show sally_scaled
 
             s "Hey - Finchenzo right? I saw what you did. That was really nice. Want to sit with me?"
 
-            show sally at left
+            show sally_scaled at left
 
             show gilbert at right
 
@@ -99,7 +99,7 @@ label fish_fight:
         "Win":
             if sally_fight:
                 
-                show sally
+                show sally_scaled
 
                 s "Wow, thanks Finchenzo! Are you okay? Where\’d you learn to fight like that?"
 
@@ -107,15 +107,15 @@ label fish_fight:
                     "Oh that was nothing. My dad taught me how to fight":
 
                         $ sally_points += 1
-
-                        return
+                        pass
 
                     "I just got lucky. I don\’t usually do things like that":
+                        
+                        pass
 
-                        return
             else:
 
-                show gertrude
+                show gertrude_scaled
                 
                 g "Smooth moves there, Finny boy. That guy\’s major chum scum. Where\’d you learn to fight like that?"
 
@@ -123,16 +123,15 @@ label fish_fight:
                     "Oh that was nothing. My dad taught me how to fight":
 
                         $ gerty_points += 1
-
-                        return
+                        pass
 
                     "That fish has two left fins, he didn\’t stand a chance anyway.":
 
-                        return
+                        pass
         "Lose":
             if sally_fight:
                 
-                show sally
+                show sally_scaled
 
                 s "You okay, Finchenzo? Thanks for trying to help, that guy\’s a total blowhole."
 
@@ -141,10 +140,12 @@ label fish_fight:
                 f "{i}Ugh, my dad would be so disappointed{/i}"
             else:
 
-                show gertrude
+                show gertrude_scaled
                 
                 g "Need some help there, Finny boy? That guy\’s major chum scum."
 
                 f "Thanks, I\’m okay"
 
                 f "{i}Ugh, my dad would be so disappointed{/i}"
+
+    jump day_one_afterschool
