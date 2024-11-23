@@ -9,7 +9,6 @@ label classroom:
     show mrpink
 
     p "Everyone give a warm welcome to Finchenzo Wong, he is transferring here from Atlantis. Feel free to take your seat in the back Finchenzo"
-
     scene bg class internal
     with dissolve
     show classroom
