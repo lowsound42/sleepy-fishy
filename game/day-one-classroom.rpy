@@ -21,7 +21,7 @@ label classroom:
     menu:
         fs "(bobby asked you if your flippers were from the dumpster)"
 
-        "Flip you, you fugly bottom feeder, I got them at your mom\’s house":
+        "Flip you, you fugly bottom feeder, I got them at your mom\'s house":
             hide classroom
             hide gilbert
             $ gerty_points += 10
@@ -37,7 +37,7 @@ label classroom:
         hide classroomgeneric
         show classroom
         show mrpink
-        p "Ok class, settle down, we’re starting now."
+        p "Ok class, settle down, we're starting now."
         jump day_one_lunch
 
 

@@ -1,17 +1,17 @@
 define sally_fight = True
+define fight_status = True
 
 label day_one_lunch:
 
     scene bg lunch room line
+    show lunchroom
 
     "You arrive in the lunchroom, and notice the line is very long and you are very hungry."
     
     menu: 
         "You decide to:"
 
-        "Decide to cut at the beginning of the line":
-
-            jump cut_line
+        "Pretend to know someone in the line and cut in":
 
             $ gerty_points += 1
 
@@ -19,23 +19,27 @@ label day_one_lunch:
 
             $ sally_points += 1
 
+    jump cut_line
+
 
 label cut_line:
-    show npc fish lunch
-    f "Hey my fishman - long time no see. It\’s been ages eh! Haven\’t seen you since Mussel Camp"
+    show npcfish
 
-    npcf "Oh, uh, haha, yeah! How\’s it going"
+    f "Hey my fishman - long time no see. It\'s been ages eh! Haven\'t seen you since Mussel Camp"
 
-    f "Oh good, y\’know, swimming around. Ok see you later!"
+    pl "Oh, uh, haha, yeah! How\'s it going"
 
+    f "Oh good, y\'know, swimming around. Ok see you later!"
+    hide npcfish
     show fincenzo:
-        xpos 0.1
+        xpos 0.2
         zoom 0.75
 
-    show lunch lady:
+    show lunchpink:
         xpos 0.5
 
-    show npc fish lunch at left
+    show npcfish at left:
+        zoom 0.80
 
     ll "Hey there new fish on the block, have some extra worms, on the house!"
     jump bully_lunch
@@ -43,6 +47,7 @@ label cut_line:
 
 label bully_lunch:
     scene bg lunch room line
+    show lunchroom
     show shellby
 
     "You notice a small guppy fish, Shellby, getting their lunch money stolen. He stands sad and small and dejected in the back."
@@ -92,59 +97,62 @@ label bully_lunch:
 
 label fish_fight:
     scene bg lunch room line
+    show lunchroom
 
     "FIGHT moment, this should be a MINIGAME!!!"
-    
-    menu: 
-        "Win":
+
+        if fight_status:
+
             if sally_fight:
                 
                 show sally
 
-                s "Wow, thanks Finchenzo! Are you okay? Where\’d you learn to fight like that?"
+                s "Wow, thanks Finchenzo! Are you okay? Where\'d you learn to fight like that?"
 
                 menu: 
                     "Oh that was nothing. My dad taught me how to fight":
 
                         $ sally_points += 1
 
-                        return
+                        jump twoclass
 
-                    "I just got lucky. I don\’t usually do things like that":
+                    "I just got lucky. I don\'t usually do things like that":
 
-                        return
+                        jump twoclass
             else:
 
                 show gertrude
                 
-                g "Smooth moves there, Finny boy. That guy\’s major chum scum. Where\’d you learn to fight like that?"
+                g "Smooth moves there, Finny boy. That guy\'s major chum scum. Where\'d you learn to fight like that?"
 
                 menu: 
                     "Oh that was nothing. My dad taught me how to fight":
 
                         $ gerty_points += 1
+                        jump twoclass
 
-                        return
+                    "That fish has two left fins, he didn\'t stand a chance anyway.":
+                        jump twoclass
 
-                    "That fish has two left fins, he didn\’t stand a chance anyway.":
-
-                        return
-        "Lose":
+        else:
             if sally_fight:
                 
                 show sally
 
-                s "You okay, Finchenzo? Thanks for trying to help, that guy\’s a total blowhole."
+                s "You okay, Finchenzo? Thanks for trying to help, that guy\'s a total blowhole."
 
-                f "Thanks, I\’m okay"
+                f "Thanks, I\'m okay"
 
                 f "{i}Ugh, my dad would be so disappointed{/i}"
+
+                jump twoclass
             else:
 
                 show gertrude
                 
-                g "Need some help there, Finny boy? That guy\’s major chum scum."
+                g "Need some help there, Finny boy? That guy\'s major chum scum."
 
-                f "Thanks, I\’m okay"
+                f "Thanks, I\'m okay"
 
                 f "{i}Ugh, my dad would be so disappointed{/i}"
+                jump twoclass
