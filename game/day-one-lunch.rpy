@@ -60,11 +60,11 @@ label bully_lunch:
 
             hide shellby
 
-            show sally
+            show sally_scaled
 
             s "Hey - Finchenzo right? I saw what you did. That was really nice. Want to sit with me?"
 
-            show sally at left
+            show sally_scaled at left
 
             show gilbert at right
 
@@ -105,7 +105,7 @@ label fish_fight:
 
             if sally_fight:
                 
-                show sally
+                show sally_scaled
 
                 s "Wow, thanks Finchenzo! Are you okay? Where\'d you learn to fight like that?"
 
@@ -121,7 +121,7 @@ label fish_fight:
                         jump twoclass
             else:
 
-                show gertrude
+                show gertrude_scaled
                 
                 g "Smooth moves there, Finny boy. That guy\'s major chum scum. Where\'d you learn to fight like that?"
 
@@ -134,10 +134,13 @@ label fish_fight:
                     "That fish has two left fins, he didn\'t stand a chance anyway.":
                         jump twoclass
 
-        else:
+                    "That fish has two left fins, he didn\’t stand a chance anyway.":
+
+                        return
+        "Lose":
             if sally_fight:
                 
-                show sally
+                show sally_scaled
 
                 s "You okay, Finchenzo? Thanks for trying to help, that guy\'s a total blowhole."
 
@@ -148,7 +151,7 @@ label fish_fight:
                 jump twoclass
             else:
 
-                show gertrude
+                show gertrude_scaled
                 
                 g "Need some help there, Finny boy? That guy\'s major chum scum."
 
