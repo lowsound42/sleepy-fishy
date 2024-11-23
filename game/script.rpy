@@ -1,7 +1,9 @@
 ﻿define d = Character('Mafia Dad', color="#5b5655")
-define f = Character('Fincenzo', color="#1ea6cd")
+define f = Character('Fincenzo', color="#1ea6cd", image="fincenzo")
 
 default message = 1
+
+image side fincenzo = im.FactorScale("fincenzo.png", 0.25,0.25)
 
 label start:
 
@@ -13,7 +15,7 @@ label start:
 
     d "The Manta-gues have been on our ass. You\’re gonna be the future Fishhead and I\’ve got to protect you."
 
-    "{i}Ugh, another day, another school, we have to hide out in this small town. I don\’t even know if I want to be the Fishhead anymore.{/i}"
+    f "{i}Ugh, another day, another school, we have to hide out in this small town. I don\’t even know if I want to be the Fishhead anymore.{/i}"
 
     jump classroom
 
