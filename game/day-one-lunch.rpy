@@ -11,7 +11,7 @@ label day_one_lunch:
 
         "Decide to cut at the beginning of the line":
 
-            call cut_line
+            jump cut_line
 
             $ gerty_points += 1
 
@@ -19,9 +19,6 @@ label day_one_lunch:
 
             $ sally_points += 1
 
-    call bully_lunch
-
-    jump day_one_lunch
 
 label cut_line:
     show npc fish lunch
@@ -41,7 +38,7 @@ label cut_line:
     show npc fish lunch at left
 
     ll "Hey there new fish on the block, have some extra worms, on the house!"
-    return
+    jump bully_lunch
 
 
 label bully_lunch:
@@ -74,12 +71,12 @@ label bully_lunch:
             
             $ sally_points += 1
 
-            call fish_fight
-
-            return
+            jump fish_fight
         
         "You go over to the fish bully, stick out your fin to make him trip.":
 
+            $ sally_fight = False
+            
             hide shellby
 
             show gilbert
@@ -90,9 +87,7 @@ label bully_lunch:
 
             $ gerty_points += 1
 
-            call fish_fight
-
-            return
+            jump fish_fight
 
 
 label fish_fight:
@@ -153,8 +148,3 @@ label fish_fight:
                 f "Thanks, I\’m okay"
 
                 f "{i}Ugh, my dad would be so disappointed{/i}"
-
-            return
-
-
-

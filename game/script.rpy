@@ -32,6 +32,6 @@ label start:
 
     f "{i}Ugh, another day, another school, we have to hide out in this small town. I don\’t even know if I want to be the Fishhead anymore.{/i}"
 
-    jump day_one_lunch
     jump classroom
+
 

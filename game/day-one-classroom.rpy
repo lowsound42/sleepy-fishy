@@ -38,3 +38,6 @@ label classroom:
         show classroom
         show mrpink
         p "Ok class, settle down, we’re starting now."
+        jump day_one_lunch
+
+
