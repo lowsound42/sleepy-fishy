@@ -1,7 +1,7 @@
 label gintro:
     show classroomgeneric
     show gerty_scaled
-    g "Heyy, this fish\'s got some bite! Come sit with us. I\'m G and this is Bobby"
+    gs "Heyy, this fish\'s got some bite! Come sit with us. I\'m G and this is Bobby"
     hide gerty_scaled
 
     show sally_scaled

@@ -95,10 +95,10 @@ label twolunch:
     menu:
 
         "Hey G, I heard you\'re in on the Fishy Beanie game - I want in":
-            s "Meet me after school at 4PM, bring your stash."
+            g "Meet me after school at 4PM, bring your stash."
 
         "Hey Gertrude, I\'ve got Fishy Beanies at home I\'m trying to move - I want in":
             $ gerty_points += 10
-            s "Whoa Finboy! Keep your voice down. Meet me after school at 4PM, bring your stash."
+            g "Whoa Finboy! Keep your voice down. Meet me after school at 4PM, bring your stash."
 
     jump day_two_afterschool_market

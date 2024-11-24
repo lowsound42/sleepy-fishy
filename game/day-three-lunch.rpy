@@ -47,6 +47,6 @@ label threelunch:
 
         "You land a good one right in his gill. Gill stumbles and is about to fight back until G intervenes"
 
-        s "Flip off Gill, don\'t hate on him since you don\'t have a date. You should come, Finny, it\'s gonna be a good time."
+        g "Flip off Gill, don\'t hate on him since you don\'t have a date. You should come, Finny, it\'s gonna be a good time."
         
     jump day_three_afterschool

@@ -125,7 +125,7 @@ label fish_fight:
 
             show gerty_scaled
             
-            g "Smooth moves there, Finny boy. That guy\'s major chum scum. Where\'d you learn to fight like that?"
+            gs "Smooth moves there, Finny boy. That guy\'s major chum scum. Where\'d you learn to fight like that?"
 
             menu: 
                 "Oh that was nothing. My dad taught me how to fight":
@@ -162,7 +162,7 @@ label fish_fight:
                 xpos 0.1
                 zoom 0.75
 
-            g "Need some help there, Finny boy? That guy\'s major chum scum."
+            gs "Need some help there, Finny boy? That guy\'s major chum scum."
 
             fs "Thanks, I\'m okay"
 

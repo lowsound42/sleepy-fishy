@@ -5,7 +5,7 @@ label sintro:
     hide sally_scaled
 
     show gerty_scaled
-    g "Ooooh another goody two fins, like you Sally."
+    gs "Ooooh another goody two fins, like you Sally."
     hide gerty_scaled
 
     jump pink_end
