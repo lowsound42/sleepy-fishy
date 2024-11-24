@@ -1,4 +1,4 @@
 label transition_two:
     scene black
-    "DAY 3"
+    centered "DAY 3"
     jump threeclass

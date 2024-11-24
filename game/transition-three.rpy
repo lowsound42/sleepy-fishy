@@ -1,4 +1,4 @@
 label transition_three:
     scene black
-    "DAY 4"
+    centered "DAY 4"
     jump day_four
