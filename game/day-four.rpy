@@ -43,6 +43,6 @@ label end:
     centered "music: Ali"
     centered "developers: Henry, Thomas, Omar"
     centered "special mention: Gobi the schnauzer"
-    centered "built with Renpy"
+    centered "built with RenPy"
 
     stop music fadeout 1.0
