@@ -14,13 +14,12 @@ label day_one_lunch:
         "Pretend to know someone in the line and cut in":
 
             $ gerty_points += 1
+            jump cut_line
 
         "Stand at the back of the line":
 
             $ sally_points += 1
-
-    jump cut_line
-
+            jump bully_lunch
 
 label cut_line:
     show npcfish
