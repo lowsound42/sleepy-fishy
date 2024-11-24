@@ -47,6 +47,11 @@ label cut_line:
 label bully_lunch:
     scene bg lunch room line
     show lunchroom
+
+    show gilbert:
+        xpos 0.1
+        zoom 0.60
+
     show npcfish:
         xpos 0.4
         ypos 0.3
@@ -61,7 +66,7 @@ label bully_lunch:
             sh "Thanks so much!"
 
             hide npcfish
-
+            hide gilbert
             show sally_scaled
 
             s "Hey - Finchenzo right? I saw what you did. That was really nice. Want to sit with me?"
@@ -85,7 +90,7 @@ label bully_lunch:
             $ sally_fight = False
             
             hide npcfish
-
+            hide gilbert
             show gilbert
 
             "Gilbert falls into his food"

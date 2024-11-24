@@ -23,7 +23,7 @@ label find_sally:
     show sallysad:
         xpos 0.2
         zoom 0.75
-    "Salmantha, you left the house looking like that today? What are you wearing!"
+    sm "Salmantha, you left the house looking like that today? What are you wearing!"
 
     "Sally looks timid, and her eyes are downcast."
 
@@ -34,7 +34,7 @@ label find_sally:
                 xpos 0.2
                 zoom 0.75
             $ sally_points += 10
-            "Why, Sally, who is this floppy ruffian?"
+            sm "Why, Sally, who is this floppy ruffian?"
             s "Let's just go mom"
 
         "Hey lady, what the flip is up with your fugly ass sweater?":
@@ -43,7 +43,7 @@ label find_sally:
                 xpos 0.2
                 zoom 0.75
             $ sally_points += 20
-            "Young fish, how dare you?! Salmantha we are going home right this minute!"
+            sm "Young fish, how dare you?! Salmantha we are going home right this minute!"
             s "You know what mom, I'm walking home today. I don't want a ride. C'mon let's go Finchenzo!"
 
     jump internal_monologue
@@ -58,7 +58,7 @@ label find_gerty:
     show gertrude:
         xpos 0.4
         zoom 0.75
-    "Gertie sweetie! How was your day? How are your friends? Tell me all about it!"
+    gd "Gertie sweetie! How was your day? How are your friends? Tell me all about it!"
     
     "(He reaches out and pinches her cheek)"
 
@@ -72,7 +72,7 @@ label find_gerty:
                 xpos 0.4
                 zoom 0.75
             $ gerty_points += 10
-            "Oh, my, hello young fish! Well, Gertie, I think we've got to get going home now…"
+            gd "Oh, my, hello young fish! Well, Gertie, I think we've got to get going home now…"
             s "Right…See you later Finny"
 
         "Hey G and Mr. G - we actually have a school project to do together. Is it okay if G stays a bit later after school today?":
@@ -81,7 +81,7 @@ label find_gerty:
                 xpos 0.4
                 zoom 0.75
             $ gerty_points += 20
-            "Oh, of course! Gertie, I'll come back to pick you up in an hour? I love you my little flipper."
+            gd "Oh, of course! Gertie, I'll come back to pick you up in an hour? I love you my little flipper."
             
             g "Okay, see you later dad!"
             
