@@ -7,7 +7,7 @@ label day_two_afterschool_concert:
     "The secret concert takes place after hours at school. You sneak in at 7PM to the cafeteria, and it is packed with fish."
 
     show sally_scaled
-    s "Hey Finchenzo! So glad you made it. I hope you have a great time!"
+    s "Hey Fincenzo! So glad you made it. I hope you have a great time!"
 
     hide sally_scaled
     "You move through the crowd, and as the music starts flowing, the fish start grooving. The music picks up and it\’s time for a MOSH PIT!"
@@ -36,12 +36,12 @@ label day_two_afterschool_market:
     g "Ok, everyone, the market is open. You can bid or sell, let\’s see what you\’ve got!"
 
     menu:
-        "You look around the tables, your Jellyfish baby is definitely the most valuable one here."
-        "You drop off your limited edition Jellyfish baby at the auction table. Where\’s the fun if you don\’t participate?":
+        "You look around the tables, your Jellyfish beanie is definitely the most valuable one here."
+        "You drop off your limited edition Jellyfish beanie at the auction table. Where\’s the fun if you don\’t participate?":
             g "Wow, Jellyboo is so rare! I\’m so glad you came."
             $ gerty_points += 10
 
-        "You keep your Jellyfish baby in your bag, you\’d only put it out if there was something valuable to trade for.":
+        "You keep your Jellyfish beanie in your bag, you\’d only put it out if there was something valuable to trade for.":
             g "Hmmm, hope you have something to bring next time."
 
     jump transition_two

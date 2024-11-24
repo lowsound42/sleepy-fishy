@@ -1,4 +1,6 @@
 label transition_two:
-    scene black
-    centered "DAY 3"
+    show transition 3
+    window hide dissolve
+    pause 1.0
+
     jump threeclass

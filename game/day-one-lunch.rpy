@@ -50,12 +50,12 @@ label bully_lunch:
 
     show gilbert:
         xpos 0.1
-        zoom 0.60
+        zoom 0.75
 
-    show npcfish:
+    show shellby:
         xpos 0.4
         ypos 0.3
-        zoom 0.25
+        zoom 0.75
 
     "You notice a small guppy fish, Shellby, getting their lunch money stolen. He stands sad and small and dejected in the back."
 
@@ -65,11 +65,11 @@ label bully_lunch:
         "You go over to him quietly, and offer your extra worms. Shellby is grateful":
             sh "Thanks so much!"
 
-            hide npcfish
+            hide shellby
             hide gilbert
             show sally_scaled
 
-            s "Hey - Finchenzo right? I saw what you did. That was really nice. Want to sit with me?"
+            s "Hey - Fincenzo right? I saw what you did. That was really nice. Want to sit with me?"
 
             show sally_scaled at left
 
@@ -103,6 +103,8 @@ label bully_lunch:
 
 
 label fish_fight:
+    show instructions
+    "Click to begin!"
     scene bg lunch room line
     show fightscene
 
@@ -117,7 +119,7 @@ label fish_fight:
             
             show sally_scaled
 
-            s "Wow, thanks Finchenzo! Are you okay? Where\'d you learn to fight like that?"
+            s "Wow, thanks Fincenzo! Are you okay? Where\'d you learn to fight like that?"
             
             menu: 
                 "Oh that was nothing. My dad taught me how to fight":
@@ -150,7 +152,7 @@ label fish_fight:
                 xpos 0.1
                 zoom 0.75
 
-            s "You okay, Finchenzo? Thanks for trying to help, that guy\'s a total blowhole."
+            s "You okay, Fincenzo? Thanks for trying to help, that guy\'s a total blowhole."
 
             fs "Thanks, I\'m okay"
 

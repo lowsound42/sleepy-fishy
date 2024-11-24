@@ -35,16 +35,16 @@ label find_sally:
                 zoom 0.75
             $ sally_points += 10
             sm "Why, Sally, who is this floppy ruffian?"
-            s "Let's just go mom"
+            sside "Let's just go mom"
 
-        "Hey lady, what the flip is up with your fugly ass sweater?":
+        "Hey lady, what the flip is up with your fugly ass dress?":
             hide sallysad
             show sally:
                 xpos 0.2
                 zoom 0.75
             $ sally_points += 20
             sm "Young fish, how dare you?! Salmantha we are going home right this minute!"
-            s "You know what mom, I'm walking home today. I don't want a ride. C'mon let's go Finchenzo!"
+            sside "You know what mom, I'm walking home today. I don't want a ride. C'mon let's go Fincenzo!"
 
     jump internal_monologue
 
@@ -63,17 +63,17 @@ label find_gerty:
     "(He reaches out and pinches her cheek)"
 
     "G looks embarrassed and brushes away his hand"
-    g "Don't call me that dad! I told you to call me G!"
+    gside "Don't call me that dad! I told you to call me G!"
 
     menu:
-        "What's swimming, Mr. G *puts arm around G's shoulder” I'm Finchenzo.":
+        "What's swimming, Mr. G *puts arm around G's shoulder” I'm Fincenzo.":
             hide gertrude
             show gertyhappy:
                 xpos 0.4
                 zoom 0.75
             $ gerty_points += 10
             gd "Oh, my, hello young fish! Well, Gertie, I think we've got to get going home now…"
-            s "Right…See you later Finny"
+            gside "Right…See you later Finny"
 
         "Hey G and Mr. G - we actually have a school project to do together. Is it okay if G stays a bit later after school today?":
             hide gertrude
@@ -83,7 +83,7 @@ label find_gerty:
             $ gerty_points += 20
             gd "Oh, of course! Gertie, I'll come back to pick you up in an hour? I love you my little flipper."
             
-            g "Okay, see you later dad!"
+            gside "Okay, see you later dad!"
             
             hide mrgillyweed
             g "Quick thinking Fin!"

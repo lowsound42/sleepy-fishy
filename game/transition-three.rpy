@@ -1,4 +1,5 @@
 label transition_three:
-    scene black
-    centered "DAY 4"
+    show transition 4
+    window hide dissolve
+    pause 1.0
     jump day_four

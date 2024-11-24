@@ -11,19 +11,29 @@ label day_four:
         show sally:
             zoom 0.75
             xpos 0.3
-        s "Hey Finchenzo - wanna dance with me?"
+        s "Hey Fincenzo - wanna dance with me?"
     else:
         show gertrude:
             zoom 0.75
             xpos 0.3
-        g "Hey Finchenzo - wanna dance with me?"
+        g "Hey Fincenzo - wanna dance with me?"
 
-    
     menu:
         ff ""
-        "This school isn't so bad after all":
-            jump happy
-        "I realize I'm a lone fish after all. If I'm going to be a Fishfather one day, I've gotta keep my heart cold and my head clear.”":
+        "Yes":
+            hide gertrude
+            show gertrude:
+                zoom 0.75
+                xpos 0.2
+            show formal:
+                zoom 0.80
+                xpos 0.5
+            menu:
+                "This school isn't so bad after all":
+                    jump happy
+                "I realize I'm a lone fish after all. If I'm going to be a Fishfather one day, I've gotta keep my heart cold and my head clear.":
+                    jump fishfather
+        "No":
             jump fishfather
 
 label fishfather:

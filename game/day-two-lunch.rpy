@@ -10,14 +10,14 @@ label twolunch:
         xpos 0.1
         zoom 0.75
 
-    show npcfish:
+    show shellby:
         xpos 0.4
         ypos 0.3
-        zoom 0.25
+        zoom 0.75
 
     "You\'re sitting and eating your lunch. Ramsea comes up to you, little Shellby in tow."
 
-    r "Hey Finchenzo, I saw what you did yesterday for little Shellby. He\'s my little brother."
+    r "Hey Fincenzo, I saw what you did yesterday for little Shellby. He\'s my little brother."
 
     sh "Thanks so much man! That guy\'s real chum scum"
 
@@ -55,7 +55,7 @@ label twolunch:
         r "Oh right - it\'s Sally. That'\s her stage name."
 
         hide ramsea
-        hide npcfish
+        hide shellby
 
         show sally:
             xpos 0.3
@@ -77,14 +77,14 @@ label twolunch:
     jump day_two_afterschool_concert
     
     label student_secret:
-        r "There is an underground market that sells fishy babies™. If you\'re looking to make some extra cash, you should talk to Gertrude"
+        r "There is an underground market that sells fishy beanies. If you\'re looking to make some extra cash, you should talk to Gertrude"
 
         fs "Who\'s Gertrude?"
 
         r "Oh fish! You didn\'t hear that from me, I meant “G.” But don\'t call her that, she hates it"
 
         hide ramsea
-        hide npcfish
+        hide shellby
 
         show gertrude:
             xpos 0.3

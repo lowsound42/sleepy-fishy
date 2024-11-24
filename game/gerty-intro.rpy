@@ -5,7 +5,7 @@ label gintro:
     hide gerty_scaled
 
     show sally_scaled
-    s "Can you guys be quiet? The class is starting."
+    s "Can you guys be quiet? The class is starting. Hi, Fincenzo, I'm Sally"
     hide sally_scaled
 
     jump pink_end

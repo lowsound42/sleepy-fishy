@@ -1,21 +1,23 @@
 label classroom:
 
-    scene bg class entrance
-    with dissolve
-
+    scene newschool
     show outside school
     image side school = im.FactorScale("school fincenzo.png", 0.25,0.25)
-
-    show mrpink
-
-    p "Everyone give a warm welcome to Finchenzo Wong, he is transferring here from Atlantis. Feel free to take your seat in the back Finchenzo"
+    
+    show school:
+        zoom 0.65
+        xpos 0.3
+    "You arrive at Fish High for your first day"
+    hide school
     scene bg class internal
-    with dissolve
     show classroom
+    show mrpink with Dissolve(1.0)
+    p "Everyone give a warm welcome to Fincenzo Wong, he is transferring here from Atlantis. Feel free to take your seat in the back Fincenzo"
+    hide mrpink
 
     show gilbert
     b "Where are those flippers from, the dumpster?"
-    "school of fish laugh at Fincenzo"
+    "You notice the school of fish laugh and jeer"
 
     label bobby_response:
     menu:
