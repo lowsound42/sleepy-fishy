@@ -13,12 +13,12 @@ label day_one_lunch:
 
         "Pretend to know someone in the line and cut in":
 
-            $ gerty_points += 1
+            $ gerty_points += 10
             jump cut_line
 
         "Stand at the back of the line":
 
-            $ sally_points += 1
+            $ sally_points += 10
             jump bully_lunch
 
 label cut_line:
@@ -81,7 +81,7 @@ label bully_lunch:
 
             s "Let go of me, Gillbert!"
             
-            $ sally_points += 1
+            $ sally_points += 10
 
             jump fish_fight
         
@@ -97,7 +97,7 @@ label bully_lunch:
 
             gl "Who the flip do you think you are my guy?"
 
-            $ gerty_points += 1
+            $ gerty_points += 10
 
             jump fish_fight
 
@@ -121,7 +121,7 @@ label fish_fight:
             
             menu: 
                 "Oh that was nothing. My dad taught me how to fight":
-                    $ sally_points += 1
+                    $ sally_points += 10
                     jump day_one_afterschool
 
                 "I just got lucky. I don\'t usually do things like that":
@@ -134,7 +134,7 @@ label fish_fight:
 
             menu: 
                 "Oh that was nothing. My dad taught me how to fight":
-                    $ gerty_points += 1
+                    $ gerty_points += 10
                     jump day_one_afterschool
 
                 "That fish has two left fins, he didn\'t stand a chance anyway.":
