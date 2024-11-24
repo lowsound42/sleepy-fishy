@@ -26,7 +26,7 @@ label cut_line:
 
     f "Hey my fishman - long time no see. It\'s been ages eh! Haven\'t seen you since Mussel Camp"
 
-    pl "Oh, uh, haha, yeah! How\'s it going"
+    npcf "Oh, uh, haha, yeah! How\'s it going"
 
     f "Oh good, y\'know, swimming around. Ok see you later!"
     hide npcfish
