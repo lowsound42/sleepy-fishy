@@ -47,7 +47,10 @@ label cut_line:
 label bully_lunch:
     scene bg lunch room line
     show lunchroom
-    show shellby
+    show npcfish:
+        xpos 0.4
+        ypos 0.3
+        zoom 0.25
 
     "You notice a small guppy fish, Shellby, getting their lunch money stolen. He stands sad and small and dejected in the back."
 
@@ -57,7 +60,7 @@ label bully_lunch:
         "You go over to him quietly, and offer your extra worms. Shellby is grateful":
             sh "Thanks so much!"
 
-            hide shellby
+            hide npcfish
 
             show sally_scaled
 
@@ -81,7 +84,7 @@ label bully_lunch:
 
             $ sally_fight = False
             
-            hide shellby
+            hide npcfish
 
             show gilbert
 
@@ -96,65 +99,72 @@ label bully_lunch:
 
 label fish_fight:
     scene bg lunch room line
-    show lunchroom
+    show fightscene
 
     call fight_start
 
     if fight_status:
+        show finwin:
+            pos(0.05, 0.60)
+            zoom 0.25
 
         if sally_fight:
             
             show sally_scaled
 
             s "Wow, thanks Finchenzo! Are you okay? Where\'d you learn to fight like that?"
-
+            
             menu: 
                 "Oh that was nothing. My dad taught me how to fight":
-
                     $ sally_points += 1
-
-                    jump twoclass
+                    jump day_one_afterschool
 
                 "I just got lucky. I don\'t usually do things like that":
-
-                    jump twoclass
+                    jump day_one_afterschool
         else:
 
-            show gertrude_scaled
+            show gerty_scaled
             
             g "Smooth moves there, Finny boy. That guy\'s major chum scum. Where\'d you learn to fight like that?"
 
             menu: 
                 "Oh that was nothing. My dad taught me how to fight":
-
                     $ gerty_points += 1
-                    jump twoclass
+                    jump day_one_afterschool
 
                 "That fish has two left fins, he didn\'t stand a chance anyway.":
-                    jump twoclass
-
-                "That fish has two left fins, he didn\'t stand a chance anyway.":
-
-                    return
+                    jump day_one_afterschool
     else:
         if sally_fight:
             
-            show sally_scaled
+            show sally_scaled:
+                xpos 0.4
+                zoom 0.75
+
+            show gillbertwin:
+                xpos 0.1
+                zoom 0.75
 
             s "You okay, Finchenzo? Thanks for trying to help, that guy\'s a total blowhole."
 
-            f "Thanks, I\'m okay"
+            fs "Thanks, I\'m okay"
 
-            f "{i}Ugh, my dad would be so disappointed{/i}"
+            fs "{i}Ugh, my dad would be so disappointed{/i}"
 
-            jump twoclass
+            jump day_one_afterschool
         else:
 
-            show gertrude_scaled
+            show gerty_scaled:
+                xpos 0.4
+                zoom 0.75
             
+            show gillbertwin:
+                xpos 0.1
+                zoom 0.75
+
             g "Need some help there, Finny boy? That guy\'s major chum scum."
 
-            f "Thanks, I\'m okay"
+            fs "Thanks, I\'m okay"
 
-            f "{i}Ugh, my dad would be so disappointed{/i}"
-            jump twoclass
+            fs "{i}Ugh, my dad would be so disappointed{/i}"
+            jump day_one_afterschool

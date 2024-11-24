@@ -1,7 +1,7 @@
 label day_one_afterschool:
     scene outside school
 
-    f "{i}What a day{/i}"
+    fs "{i}What a day{/i}"
 
     menu:
         "You walk out the front steps and notice the fish in front of you drop his wallet"
@@ -14,4 +14,4 @@ label day_one_afterschool:
             show sally_scaled
             s "Hey, want to walk home with me?"
 
-        
+    jump transition_one    

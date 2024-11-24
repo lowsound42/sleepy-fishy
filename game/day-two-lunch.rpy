@@ -1,3 +1,6 @@
+define sally_secret = True
+define gerty_secret = True
+
 label twolunch:
     scene day two lunch
     
@@ -7,9 +10,10 @@ label twolunch:
         xpos 0.1
         zoom 0.75
 
-    show shellby:
+    show npcfish:
         xpos 0.4
-        zoom 0.75
+        ypos 0.3
+        zoom 0.25
 
     "You\'re sitting and eating your lunch. Ramsea comes up to you, little Shellby in tow."
 
@@ -51,7 +55,7 @@ label twolunch:
         r "Oh right - it\'s Sally. That'\s her stage name."
 
         hide ramsea
-        hide shellby
+        hide npcfish
 
         show sally:
             xpos 0.3
@@ -69,3 +73,32 @@ label twolunch:
 
         "Wow Sally, you\'re in a band with our teacher? What\'s up with that?":
             s "Hey, you\'ve never heard a fish play! You should come check us out tonight, we\'re gonna blow you away!"
+
+    jump day_two_afterschool_concert
+    
+    label student_secret:
+        r "There is an underground market that sells fishy babies™. If you\'re looking to make some extra cash, you should talk to Gertrude"
+
+        fs "Who\'s Gertrude?"
+
+        r "Oh fish! You didn\'t hear that from me, I meant “G.” But don\'t call her that, she hates it"
+
+        hide ramsea
+        hide npcfish
+
+        show gertrude:
+            xpos 0.3
+            zoom 0.7
+
+        "You find G in the lunchroom."
+
+    menu:
+
+        "Hey G, I heard you\'re in on the Fishy Beanie game - I want in":
+            s "Meet me after school at 4PM, bring your stash."
+
+        "Hey Gertrude, I\'ve got Fishy Beanies at home I\'m trying to move - I want in":
+            $ gerty_points += 10
+            s "Whoa Finboy! Keep your voice down. Meet me after school at 4PM, bring your stash."
+
+    jump day_two_afterschool_market

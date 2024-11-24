@@ -19,7 +19,7 @@ label classroom:
 
     label bobby_response:
     menu:
-        fs "(bobby asked you if your flippers were from the dumpster)"
+        fs "(Gillbert asked you if your flippers were from the dumpster)"
 
         "Flip you, you fugly bottom feeder, I got them at your mom\'s house":
             hide classroom

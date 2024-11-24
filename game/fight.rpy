@@ -48,28 +48,28 @@ label qte_setup(time_start, time_max, interval, trigger_key, x_align, y_align):
     $ interval = interval
     $ trigger_key = trigger_key
 
-    hide right_arrow
-    hide left_arrow
-    hide up_arrow
-    hide down_arrow
+    hide right
+    hide left
+    hide up
+    hide down
 
     if trigger_key == "K_RIGHT":
-        show right_arrow:
+        show right:
             xalign 0.5
             yalign 0.4
 
     elif trigger_key == "K_LEFT":
-        show left_arrow:
+        show left:
             xalign 0.5
             yalign 0.4
 
     elif trigger_key == "K_UP":
-        show up_arrow:
+        show up:
             xalign 0.5
             yalign 0.4
 
     elif trigger_key == "K_DOWN":
-        show down_arrow:
+        show down:
             xalign 0.5
             yalign 0.4
 
